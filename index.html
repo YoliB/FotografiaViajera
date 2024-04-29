@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../FotografiaViajera/CSS/styles.css">
+    <script src="../FotografiaViajera/JS/index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Laila:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/513a517bcc.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Fotográfa Viajera</title>
+   
+</head>
+<body>
+    <header id="cabecera">
+
+        <div class="fondosHero" id="fondoEncabezado1"></div>
+        <div class="fondosHero" id="fondoEncabezado2"></div>
+        <div class="fondosHero" id="fondoEncabezado3"></div>
+
+        <nav id="navBar">
+           
+            <a href="index.html">
+                <img src="Galería/Logo1.png" id="logo" alt="Logo">
+                
+            </a>
+
+            <ul >
+                <li class="listadoMenu"><a href="#cabecera">Inicio</a></li>
+                <li class="listadoMenu">
+                    <a href="#paises">País</a>
+                    <ul class="subMenu">
+                        <li class="listadoSubMenu"><a href="#paises" onclick="seleccionarPestanha('africa', 'tabAfrica')">África</a></li>
+                        <li class="listadoSubMenu"><a href="#paises" onclick="seleccionarPestanha('america', 'tabAmerica')">América</a></li>
+                        <li class="listadoSubMenu"><a href="#paises" onclick="seleccionarPestanha('europa', 'tabEuropa')">Europa</a></li>
+                    </ul>
+                
+                </li>
+                <li class="listadoMenu"><a href="#conoceme">Conóceme</a></li>
+                <li class="listadoMenu"><a href="#galeria">Galeria</a></li>
+                <li class="listadoMenu"><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+        
+        <h1 class="preTitulo">Fotógrafa de viajes</h1>
+
+        <h1 class="titulo">Retrato el mundo a través de
+            los ojos de mis lentes</h1>
+
+    </header>
+
+    <section id="paises">
+        <h1 class="subTitulo" data-aos="zoom-out-up">País</h1>
+
+        <div class="containerContinente">
+            
+            <p id="tabAfrica" class="continente pestanhaActiva" onclick="seleccionarPestanha('africa', 'tabAfrica')">África</p>
+            <p id="tabAmerica" class="continente" onclick="seleccionarPestanha('america', 'tabAmerica')">América</p>
+            <p id="tabEuropa" class="continente" onclick="seleccionarPestanha('europa', 'tabEuropa')">Europa</p>
+        
+        </div>
+
+        <div class="containerPais active" id="africa">
+            <div class="pais">
+                <div class="imagenPais">
+                  <img src="Galería/kenia2.jpg" alt="kenia">
+                </div>
+                <p class="nombrePais">Kenia</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/uganda.jpg" alt="uganda">
+                </div>
+                
+                <p class="nombrePais">Uganda</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/Sudafrica1.jpg" alt="sudafrica">
+                </div>
+                <p class="nombrePais">Sudafrica</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/cabo verde.jpg" alt="cabo verde">
+                </div>
+                <p class="nombrePais">Cabo Verde</p>
+            </div>
+        </div>
+
+        <div class="containerPais" id="america">
+            <div class="pais">
+                <div class="imagenPais">
+                  <img src="Galería/chile1.jpg" alt="Chile">
+                </div>
+                <p class="nombrePais">Chile</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/costa rica.jpg" alt="Costa Rica">
+                </div>
+                
+                <p class="nombrePais">Costa Rica</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/peru1.jpg" alt="Perú">
+                </div>
+                <p class="nombrePais">Perú</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/estados unidos.jpg" alt="estados unidos">
+                </div>
+                <p class="nombrePais">Estados Unidos</p>
+            </div>
+        </div>
+
+        <div class="containerPais" id="europa">
+            <div class="pais">
+                <div class="imagenPais">
+                  <img src="Galería/españa.jpg" alt="España">
+                </div>
+                <p class="nombrePais">España</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/polonia.jpg" alt="Polonia">
+                </div>
+                
+                <p class="nombrePais">Polonia</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/noruega.jpg" alt="noruega">
+                </div>
+                <p class="nombrePais">Noruega</p>
+            </div>
+            <div class="pais">
+                <div class="imagenPais">
+                    <img src="Galería/macedonia1.jpg" alt="macedonia">
+                </div>
+                <p class="nombrePais">Macedonia</p>
+            </div>
+        </div>
+
+    </section>
+    
+   <section id="conoceme">
+        <h1 class="subTitulo" data-aos="zoom-out-up">Conóceme</h1>
+        
+        <p class="descripcion">Mi nombre es Yolanda, y soy la creadora de este espacio dedicado a 
+            capturar momentos inolvidables. La fotografía y los viajes son mi gran pasión. 
+            Cada destino, cada cultura, y cada persona que encuentro en el camino me inspira a 
+            contar historias a través de imégenes. Te invito a que te sumerjas conmigo en esta 
+            aventura visual y juntos exploremos la belleza y diversidad que nuestro maravilloso 
+            planeta tiene para ofrecer.</p>
+
+        <div class="film">
+            <video src="Galería/video.mp4" id="video" controls muted autoplay></video>
+        </div>
+
+    </section>
+
+    <section id="galeria">
+        <h1 class="subTitulo" data-aos="zoom-out-up">Galeria</h1>
+        <div class="containerImagen">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/egipto.jpg" alt="Egipto">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/antartida.jpg"  alt="Antartida">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/algarve.jpg" alt="Algarve">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/mali.jpg"  alt="Mali">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/cuba.jpg"  alt="Cuba">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/mykonos.jpg" alt="Mykonos">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/namibia.jpg"  alt="Namibia">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/amazonas.jpg" alt="Amazonas">
+            <img class="imagen" data-aos="flip-left" data-aos-duration="2000" src="Galería/estonia.jpg" alt="Estonia">  
+        </div>
+
+        <div id="modalGaleria">
+            <div id="imageToShow"></div>
+
+            <button class="lbButton lbbLeft" onclick="prevImg()"><i class="fa-solid fa-angles-left"></i></button>
+            <button class="lbButton lbbRigth" onclick="nextImg()"><i class="fa-solid fa-angles-right"></i></button>
+        
+        </div>
+    </section>
+
+    <section id="contacto">
+       
+        <div class="containerContacto"> 
+           
+            <div class="containerTitulo"> 
+              
+                <h1 class="subContainerTitulo" data-aos="zoom-out-up">Contacto</h1>
+                
+                <div class="iconoImagen">
+                  
+                    <div class="miniFoto"><img src="Galería/camara1.png" alt="Copyrigth"></div>
+                    <p>Yolanda Bernárdez</p>
+                </div>
+               
+            </div>
+           
+            <form action="" id="formulario">
+                <p class="datosFormulario">Nombre</p>
+                <input id="formNombre" type="text" name="nombre" required>
+                <p class="datosFormulario">Apellidos</p>
+                <input id="formApellido" type="text" name="apellido" required>
+                <p class="datosFormulario">E-mail</p>
+                <input id="formMail" type="email" name="email" required>
+                <p class="datosFormulario">Asunto</p>
+                <input id="formAsunto" type="text" name="asunto" required>
+                <p class="datosFormulario">Mensaje</p>
+                <input id="formTexto" type="text" name="mensaje" required>
+                <input id="botonEnviar" onclick="modalFormulario()" value="Enviar">
+            </form>
+           
+        </div>
+       
+        <div id="modalFormulario">
+            <div id="modalBoxF">
+                <h1>Mensaje enviado correctamente</h1>
+                <p id="mensajeFormulario">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Accusantium quis eum dolores eligendi non adipisci nemo temporibus necessitatibus animi,
+                    dolor exercitationem laborum eius tenetur illum, deserunt sunt, explicabo soluta dolorem!</p>
+                <button onclick="cierre()">Cerrar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer  id="pieDePagina">
+
+       <div class="politica">
+            <h3>Politicas</h3>
+            <p>Política de privacidad</p>
+            <p>Tratamiento de datos</p>
+            <p>Uso de cookies</p>
+       </div>
+
+       <div class="copy">
+
+            <div class="icono"><img src="Galería/copy1.png" alt="Copyrigth"></div>
+            <p>Yolanda Bernárdez</p>
+
+       </div>
+
+       <div class="sigueme">
+
+            <h3>Sígueme</h3>
+
+            <div class="containerIcon">
+                <div class="icon"><img src="Galería/facebook1.png" alt="Facebook"></div>
+                <div class="icon"><img src="Galería/instagram.png" alt="Instagram"></div>
+                <div class="icon"><img src="Galería/x1.png" alt="Twitter"></div>
+            </div>
+       
+        </div>
+    </footer>
+
+    <script>
+
+        setInterval(slideshowAnimado, 5000);
+        readyLb();
+
+    </script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

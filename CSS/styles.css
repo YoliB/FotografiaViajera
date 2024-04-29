@@ -1,0 +1,515 @@
+body{
+    font-family: "Akaya Telivigala", system-ui;
+}
+
+#cabecera{
+    height: 940px;
+    width: 100%;
+}
+
+.fondosHero{
+    height: 920px;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+#fondoEncabezado1{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)),  url(../Galería/Encabezado.jpg);
+    z-index: 3;
+}
+
+#fondoEncabezado2{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)),  url(../Galería/encabezado2.jpg);
+    z-index: 2;
+}
+
+#fondoEncabezado3{
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)),  url(../Galería/encabezado3.jpg);
+    z-index: 1;
+}
+
+.mainSlide{
+    animation-name: mainSlideAnimacion;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.nextSlide{
+    animation-name: nextSlideAnimacion;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.hiddenSlide{
+    display: none;
+}
+
+@keyframes mainSlideAnimacion{
+    0% {margin-left: 0%;}
+    100% {margin-left: -100%;}
+}
+
+@keyframes nextSlideAnimacion{
+    0% {margin-left: 100%;}
+    100% {margin-left: 0%;}
+}
+
+nav{
+    width: 100%;
+    height: 150px;
+    position: fixed; /* Posiciona el elemento de forma fija en relación con la ventana del navegador */
+    z-index: 5; /* Controla el orden de apilamiento de los elementos posicionados */
+    background-color: rgba(255,255,255,0.25); 
+    transition-property: top;
+    transition-duration: 0.75s; 
+    top: 0;
+}
+
+#logo{
+    height:150px;
+    width: 150px;
+    float: left; /* Flota el elemento hacia la izquierda */
+    margin-left: 100px; /* Establece un margen izquierdo de 100px */
+    margin-top: 25px; /* Establece un margen superior de 25px */
+}
+
+ul{
+    display: flex;  /* Utiliza el modelo de caja flexible */
+    float: right; /* Flota el elemento hacia la derecha */
+}
+
+.listadoMenu{
+    list-style: none; /* Elimina los estilos de la lista */
+    width: auto;
+    overflow: hidden;
+    margin-right: 50px;
+    line-height: 130px;
+    font-size: 1.75rem;
+    transition-property: color;
+    transition-duration: 0.5s; 
+}
+
+.listadoMenu >a:hover{
+   color: #6B8E23;  
+}
+
+.subMenu { /* Renombrado la clase para mayor claridad */
+    display: none; /* Oculta el submenú inicialmente */
+    position: absolute; /* Posicionamiento relativo al padre */
+    list-style: none; /* Elimina el estilo de lista por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    border-radius: 5px; /* Bordes curvos opcionales */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil opcional */
+    z-index: 1;
+    top: 100px;
+  }
+  
+.listadoMenu:hover .subMenu { /* Mostrar el submenú al pasar el mouse */
+    display: block;
+  }
+
+.listadoSubMenu{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.listadoSubMenu >a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.listadoSubMenu >a:hover{
+    color:#6B8E23; 
+}
+
+.preTitulo{
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    top: 280px; /* Establece la posición superior del elemento en 300px desde el borde superior del contenedor padre */
+    animation-name: animationPre;
+    animation-duration: 3s;
+    z-index: 4;
+    color: white;
+}
+
+.titulo{
+    font-size: 4rem;
+    text-align: center;
+    position: relative;
+    top: 270px;
+    animation-name: animation;
+    animation-duration: 3s;
+    z-index: 4;
+    color: white;
+}
+
+@keyframes animation{
+    0% {opacity: 0; top:200px }
+    100% {opacity: 1; top:270px }
+}
+
+@keyframes animationPre{
+    0% {opacity: 0; }
+    60% {opacity: 0; }
+    100% {opacity: 1; }
+}
+
+#paises{
+    width: 100%;
+    height: 1200px;
+    background-color: white; /* Establece el color de fondo del elemento como blanco */
+    overflow: hidden;   
+}
+
+.subTitulo{
+    font-size: 3rem; /* Establece el tamaño de fuente en 3 rem */
+    text-align: center;
+    background-color: #6B8E23;
+    position: relative; /* Establece el posicionamiento relativo del elemento */
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.containerContinente{
+    font-size: 2.5rem;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    top:  58px;
+}
+
+.continente{
+    width: 33.33%;
+    font-size: 2rem;
+    float: left;
+    text-align: center; /* Centra el texto horizontalmente dentro del elemento */
+}
+
+.pestanhaActiva{
+    color: #6B8E23;
+    text-decoration: underline;
+
+}
+.containerPais{
+    width: 1060px;
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;  
+} 
+
+.containerPais{
+    display: none;
+}
+
+.containerPais.active{
+    display: block;
+}
+
+.pais{
+    height: calc(50% - 80px);
+    float: left;
+    margin-right: 40px;
+    margin-left: 40px; 
+    margin-bottom: 40px;
+}
+
+@keyframes animacion{
+    from{transform: scale(0.25,0.25)}
+    to{transform: scale(1,1);};
+}
+
+.paisAnimado{
+    animation-name: animacion;
+    animation-duration: 1.5s;
+}
+.imagenPais{
+    margin-top: 50px;
+    background-color: black;
+    width: 100%;
+    height: 345px;
+    overflow: hidden;
+    align-items: center; /* Alinea verticalmente los elementos hijos en el contenedor */
+    transition-property: transform;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+}
+
+.imagenPais:hover{
+    transform: scale(1.1,1.1); 
+}
+
+.nombrePais{
+    text-align: center;
+    color: black;
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+#conoceme{
+    width: 100%;
+    height: 950px;
+    background-color: #98FB98;
+    overflow: hidden;  
+   
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url(../Galería/conoceme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.descripcion{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    position: relative;
+    top: 88px; 
+    font-family: "Laila", serif; /*Define otro tipo de letra solo para esta clase*/
+}
+
+#video{
+    height: 500px;
+    margin-top: 140px;
+    margin-left: 500px;
+}
+
+.containerImagen{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas iguales */
+    margin: 88px 146px 0;
+    gap: 10px; /* Establece el espacio entre las filas y columnas del grid en 10px */
+    justify-items: center;
+}
+
+.imagen{
+    width: 389px;
+    height: 235px;
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+}
+
+#modalGaleria{
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0px;
+    display: none;
+    z-index: 5;
+}
+
+#imageToShow{
+    width: 80vw;
+    height: 750px;
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 25px;
+}
+
+.imgLB{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+} 
+
+.lbButton{
+    width: 60px;
+    height: 60px;
+   
+    position: absolute;
+    top: 25%;
+    background-color: black;
+    color: white;
+}  
+
+.lbButton:hover{
+    background-color: #6B8E23;
+    color: black;
+}  
+
+.lbbRigth{
+    right: 120px;
+}
+
+.lbbLeft{
+    left: 120px;
+}
+
+#contacto{
+    width: 100%;
+    height: 850px;
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../Galería/sunset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.containerContacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    height: 1140px;
+    margin: 88px 146px 0;
+    justify-items: center;
+ }
+
+.subContainerTitulo{
+    font-size: 4rem;
+}
+
+.iconoImagen{
+    display: flex; 
+    align-items: center; /* Alinea verticalmente los elementos */
+    font-size: 1.5rem;
+    margin-top: 216px;    
+}
+
+.miniFoto{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+#formulario{
+    margin: 50px;
+    width: 70%;
+    height: 750px;
+    float: left;
+    font-size: 1.5rem;
+    padding-left: 90px;   
+}
+
+input{
+    height: 40px;
+    width: 450px;
+}
+
+#mensaje{
+    height: 100px;
+}
+
+#botonEnviar{
+    width: 150px;
+    font-size: 1.5rem;     
+    margin-top: 25px;
+    transition-property: color,border-style, background-color;
+    transition-duration: 0.5s;
+    text-align: center;
+}
+
+#botonEnviar:hover{
+   border-style: solid;
+   border-color: black;
+   background-color: #6B8E23;
+}
+
+#modalFormulario{
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0px;
+    display: none;
+    z-index: 5;
+}
+
+#modalBoxF{
+    width: 500px;
+    height: 450px;
+    background-color: lightgrey;
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#modalBoxF>h1{
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+#modalBoxF>p{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+#modalBoxF> button{
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+#modalBoxF> button:hover{
+    color: black;
+    background-color: #6B8E23;
+}
+
+
+#pieDePagina{
+    height: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas iguales */
+    margin-left: 250px;
+}
+
+.politica{
+    font-size: 1rem;
+}
+
+.copy{
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-top: 180px;
+    font-size: 0.75rem;
+}
+
+.icono{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Añade un margen a la derecha para separar el icono del texto */
+}
+
+.sigueme{
+    font-size: 1rem;
+}
+.containerIcon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas con el mismo ancho */
+    grid-gap: 10px; /* Espacio entre las columnas */
+    margin-right: 240px;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    transition-property: color;
+    transition-duration: 0.5s;
+}
+
+.icon:hover{
+    background-color: #6B8E23;
+    
+}
+
